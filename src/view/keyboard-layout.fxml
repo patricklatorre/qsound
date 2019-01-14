@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.text.Font?>
+
+<FlowPane fx:id="keyboardPane" alignment="CENTER" hgap="10.0" prefHeight="400.0" prefWidth="900.0" prefWrapLength="445.0" styleClass="mainPane" stylesheets="@styles.css" vgap="10.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ctrl.KeyboardCtrl">
+   <children>
+      <Button fx:id="btnTilde" mnemonicParsing="false" text="`">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn1" mnemonicParsing="false" text="1">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn2" mnemonicParsing="false" text="2">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn3" mnemonicParsing="false" text="3">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn4" mnemonicParsing="false" text="4">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn5" mnemonicParsing="false" text="5">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn6" mnemonicParsing="false" text="6">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn7" mnemonicParsing="false" text="7">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn8" mnemonicParsing="false" text="8">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn9" mnemonicParsing="false" text="9">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn0" mnemonicParsing="false" text="0">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDash" mnemonicParsing="false" text="-">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEqual" mnemonicParsing="false" text="=">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnQ" mnemonicParsing="false" text="Q">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnW" mnemonicParsing="false" text="W">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnE" mnemonicParsing="false" text="E">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnR" mnemonicParsing="false" text="R">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnT" mnemonicParsing="false" text="T">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnY" mnemonicParsing="false" text="Y">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnU" mnemonicParsing="false" text="U">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnI" mnemonicParsing="false" text="I">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnO" mnemonicParsing="false" text="O">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnP" mnemonicParsing="false" text="P">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnOpenBracket" mnemonicParsing="false" text="[">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnClosedBracket" mnemonicParsing="false" text="]">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnBackslash" mnemonicParsing="false" text="\\">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnA" mnemonicParsing="false" text="A">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnS" mnemonicParsing="false" text="S">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnD" mnemonicParsing="false" text="D">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnF" mnemonicParsing="false" text="F">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnG" mnemonicParsing="false" text="G">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnH" mnemonicParsing="false" text="H">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnJ" mnemonicParsing="false" text="J">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnK" mnemonicParsing="false" text="K">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnL" mnemonicParsing="false" text="L">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnSemicolon" mnemonicParsing="false" text=";">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnQuotes" mnemonicParsing="false" text="'">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEnter" mnemonicParsing="false" text="Enter">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnLShift" mnemonicParsing="false" text="Shift">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnZ" mnemonicParsing="false" text="Z">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnX" mnemonicParsing="false" text="X">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnC" mnemonicParsing="false" text="C">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnV" mnemonicParsing="false" text="V">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnB" mnemonicParsing="false" text="B">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnN" mnemonicParsing="false" text="N">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnM" mnemonicParsing="false" text="M">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnComma" mnemonicParsing="false" text=",">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnPeriod" mnemonicParsing="false" text=".">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnSlash" mnemonicParsing="false" text="/">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnRShift" mnemonicParsing="false" text="Shift">
+         <styleClass>
+            <String fx:value="key" />
+            <String fx:value="unpressed" />
+         </styleClass>
+         <padding>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </padding>
+         <font>
+            <Font name="Montserrat Regular" size="16.0" />
+         </font>
+      </Button>
+   </children>
+   <padding>
+      <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+   </padding>
+</FlowPane>

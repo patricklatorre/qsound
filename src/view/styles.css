@@ -1,0 +1,19 @@
+.unpressed {
+    -fx-background-color: rgb(250, 114, 104);
+    -fx-text-fill: white;
+}
+
+.unpressed:pressed {
+    -fx-background-color: rgba(255, 116, 106, 0.50);
+    -fx-text-fill: white;
+}
+
+.pressed {
+    -fx-border-color: rgb(250, 114, 104);
+    -fx-border-width: 4px;
+    -fx-border-radius: 3px;
+}
+
+.mainPane {
+    -fx-background-color: white;
+}

@@ -1,0 +1,13 @@
+.unpressed {
+    -fx-background-color: rgb(250, 114, 104);
+    -fx-text-fill: white;
+}
+
+.pressed {
+    -fx-background-color: rgba(255, 116, 106, 0.50);
+    -fx-text-fill: white;
+}
+
+.mainPane {
+    -fx-background-color: white;
+}
