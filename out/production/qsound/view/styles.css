@@ -9,7 +9,7 @@
 }
 
 .pressed {
-    -fx-border-color: rgb(250, 114, 104);
+    -fx-border-color: #a9a9a9;
     -fx-border-width: 4px;
     -fx-border-radius: 3px;
 }
