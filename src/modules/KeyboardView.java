@@ -5,6 +5,11 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import sectionfx.Gooey;
 import sectionfx.GooeyJob;
+import sun.applet.Main;
+
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 
 public class KeyboardView extends GooeyJob {
 
@@ -18,7 +23,7 @@ public class KeyboardView extends GooeyJob {
         setKeyFlashing(true);
     }
 
-
+    // Flashing keys functionality
     private void setKeyFlashing(boolean flag) {
         if (flag) {
             KeyboardCtrl ctrl = mainGooey.getController(KeyboardCtrl.class);
@@ -26,15 +31,17 @@ public class KeyboardView extends GooeyJob {
             // On press
             mainGooey.getScreen().setOnKeyPressed(keyPress -> {
                 Button pressedBtn = ctrl.queryBtn(keyPress.getCode());
-                if (pressedBtn != null)
+                if (pressedBtn != null) {
                     flashKey(pressedBtn);
+                }
             });
 
             // On release
             mainGooey.getScreen().setOnKeyReleased(keyPress -> {
                 Button pressedBtn = ctrl.queryBtn(keyPress.getCode());
-                if (pressedBtn != null)
+                if (pressedBtn != null) {
                     flashKey(pressedBtn);
+                }
             });
         }
     }
