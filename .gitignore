@@ -25,3 +25,12 @@ hs_err_pid*
 # IDEA
 .idea/*
 *.iml
+
+# IntelliJ
+*.iml
+.idea/
+*.ipr
+*.iws
+out/
+.idea_modules/
+
