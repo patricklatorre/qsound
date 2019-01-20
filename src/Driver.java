@@ -1,11 +1,11 @@
 import javafx.application.Application;
 import javafx.stage.Stage;
-import modules.KeyboardView;
+import modules.Keyboard;
 
 public class Driver extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
-        KeyboardView kbView = new KeyboardView();
+        Keyboard kbView = new Keyboard();
 
         primaryStage = kbView.getWindow();
         primaryStage.showAndWait();

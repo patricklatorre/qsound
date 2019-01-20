@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox fx:id="mainPane" alignment="CENTER" minHeight="130.0" minWidth="300.0" spacing="15.0" styleClass="mainPane" stylesheets="@../../view/styles.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="modules.modals.StringInputCtrl">
+   <children>
+      <VBox spacing="2.0">
+         <children>
+            <Label fx:id="messageField" text="#" />
+            <TextField fx:id="inputField" />
+         </children>
+      </VBox>
+      <Button fx:id="closeBtn" mnemonicParsing="false" text="Done" />
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

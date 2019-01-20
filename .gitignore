@@ -23,14 +23,16 @@
 hs_err_pid*
 
 # IDEA
+*.wav
+*.mp3
+*.fst
+desktop.ini
+*.mid
+*.flp
+LINKS.txt
+cover.jpg
 .idea/*
 *.iml
+out/*
 
-# IntelliJ
-*.iml
-.idea/
-*.ipr
-*.iws
-out/
-.idea_modules/
 

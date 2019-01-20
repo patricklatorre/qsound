@@ -3,15 +3,15 @@ package modules;
 import ctrl.KeyboardCtrl;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import model.KeyboardConfig;
+import modules.modals.StringInput;
 import sectionfx.Gooey;
 import sectionfx.GooeyJob;
-import sun.applet.Main;
+import sound.engine.Sound;
 
-import javax.sound.sampled.AudioInputStream;
-import javax.sound.sampled.AudioSystem;
-import javax.sound.sampled.Clip;
+public class Keyboard extends GooeyJob {
 
-public class KeyboardView extends GooeyJob {
+    private KeyboardConfig keyboardConfig;
 
     @Override
     public void create() {
@@ -20,11 +20,22 @@ public class KeyboardView extends GooeyJob {
                 .fromFXML("/view/keyboard-layout.fxml")
                 .withScreen(900, 400);
 
-        setKeyFlashing(true);
+        keyPressLogic(true);
+        keyboardConfig = new KeyboardConfig(mainGooey.getController(KeyboardCtrl.class));
+
+        for (Button btn : mainGooey.getController(KeyboardCtrl.class).getAllButtons()) {
+            btn.setOnAction(e -> {
+                String soundPath = StringInput.display("File", "Sound file path:");
+                Sound sound = new Sound(soundPath);
+                keyboardConfig.loadSoundToBtn(btn, sound);
+            });
+
+
+        }
     }
 
     // Flashing keys functionality
-    private void setKeyFlashing(boolean flag) {
+    private void keyPressLogic(boolean flag) {
         if (flag) {
             KeyboardCtrl ctrl = mainGooey.getController(KeyboardCtrl.class);
 
@@ -32,6 +43,12 @@ public class KeyboardView extends GooeyJob {
             mainGooey.getScreen().setOnKeyPressed(keyPress -> {
                 Button pressedBtn = ctrl.queryBtn(keyPress.getCode());
                 if (pressedBtn != null) {
+                    // Play sound
+                    Sound sound = keyboardConfig.getKeySoundMap().get(keyPress.getCode());
+                    if (sound != null)
+                        sound.play();
+
+                    // Pseudo animation
                     flashKey(pressedBtn);
                 }
             });
@@ -45,7 +62,6 @@ public class KeyboardView extends GooeyJob {
             });
         }
     }
-
     private void flashKey(Button btn) {
         if (btn.getStyleClass().contains("unpressed")) {
             btn.getStyleClass().remove("unpressed");
