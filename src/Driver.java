@@ -4,7 +4,7 @@ import modules.Keyboard;
 
 public class Driver extends Application {
     @Override
-    public void start(Stage primaryStage) throws Exception {
+    public void start(Stage primaryStage) {
         Keyboard kbView = new Keyboard();
 
         primaryStage = kbView.getWindow();

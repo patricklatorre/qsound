@@ -1,4 +1,4 @@
-package modules.modals;
+package modules.generic.stringinput;
 
 import java.net.URL;
 import java.util.ResourceBundle;

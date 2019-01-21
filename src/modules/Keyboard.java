@@ -2,9 +2,10 @@ package modules;
 
 import ctrl.KeyboardCtrl;
 import javafx.scene.control.Button;
+import javafx.scene.input.KeyCode;
 import javafx.stage.Stage;
 import model.KeyboardConfig;
-import modules.modals.StringInput;
+import modules.generic.stringinput.StringInput;
 import sectionfx.Gooey;
 import sectionfx.GooeyJob;
 import sound.engine.Sound;
@@ -20,49 +21,54 @@ public class Keyboard extends GooeyJob {
                 .fromFXML("/view/keyboard-layout.fxml")
                 .withScreen(900, 400);
 
-        keyPressLogic(true);
-        keyboardConfig = new KeyboardConfig(mainGooey.getController(KeyboardCtrl.class));
+        KeyboardCtrl ctrl = mainGooey.getController(KeyboardCtrl.class);
 
-        for (Button btn : mainGooey.getController(KeyboardCtrl.class).getAllButtons()) {
-            btn.setOnAction(e -> {
-                String soundPath = StringInput.display("File", "Sound file path:");
-                Sound sound = new Sound(soundPath);
-                keyboardConfig.loadSoundToBtn(btn, sound);
-            });
+        // On key press & release
+        mainGooey.getScreen().setOnKeyPressed(keyEvent -> onKeyPressed(keyEvent.getCode()));
+        mainGooey.getScreen().setOnKeyReleased(keyEvent -> onKeyReleased(keyEvent.getCode()));
 
+        // Load new board config
+        keyboardConfig = new KeyboardConfig(ctrl);
 
+        // On key click & touch
+        for (Button btn : ctrl.getAllButtons()) {
+            onKeyBtnClick(btn);
         }
     }
 
-    // Flashing keys functionality
-    private void keyPressLogic(boolean flag) {
-        if (flag) {
-            KeyboardCtrl ctrl = mainGooey.getController(KeyboardCtrl.class);
+    private void onKeyBtnClick(Button btn) {
+        btn.setOnMouseClicked(e -> {
+            String soundPath = StringInput.display("File", "Sound file path:");
+            Sound sound = new Sound(soundPath);
+            keyboardConfig.loadSoundToBtn(btn, sound);
+        });
+    }
 
-            // On press
-            mainGooey.getScreen().setOnKeyPressed(keyPress -> {
-                Button pressedBtn = ctrl.queryBtn(keyPress.getCode());
-                if (pressedBtn != null) {
-                    // Play sound
-                    Sound sound = keyboardConfig.getKeySoundMap().get(keyPress.getCode());
-                    if (sound != null)
-                        sound.play();
+    private void onKeyPressed(KeyCode keyCode) {
+        Button pressedBtn = mainGooey.getController(KeyboardCtrl.class).queryBtn(keyCode);
 
-                    // Pseudo animation
-                    flashKey(pressedBtn);
-                }
-            });
+        if (pressedBtn != null) {
+            // Play sound
+            Sound sound = keyboardConfig.getKeySoundMap().get(keyCode);
+            if (sound != null) {
+                sound.play();
+            }
 
-            // On release
-            mainGooey.getScreen().setOnKeyReleased(keyPress -> {
-                Button pressedBtn = ctrl.queryBtn(keyPress.getCode());
-                if (pressedBtn != null) {
-                    flashKey(pressedBtn);
-                }
-            });
+            // Impact effect
+            keyImpactFX(pressedBtn);
         }
     }
-    private void flashKey(Button btn) {
+
+    private void onKeyReleased(KeyCode keyCode) {
+        KeyboardCtrl ctrl = mainGooey.getController(KeyboardCtrl.class);
+        Button pressedBtn = ctrl.queryBtn(keyCode);
+
+        if (pressedBtn != null) {
+            keyImpactFX(pressedBtn);
+        }
+    }
+
+    private void keyImpactFX(Button btn) {
         if (btn.getStyleClass().contains("unpressed")) {
             btn.getStyleClass().remove("unpressed");
             btn.getStyleClass().add("pressed");
@@ -71,4 +77,20 @@ public class Keyboard extends GooeyJob {
             btn.getStyleClass().add("unpressed");
         }
     }
+
+    /*
+    private void onKeyTouchPress(Button btn) {
+        KeyboardCtrl ctrl = mainGooey.getController(KeyboardCtrl.class);
+        btn.setOnTouchPressed(e -> {
+            onKeyPressed(ctrl.inferKeyCode(btn.getText()));
+        });
+    }
+
+    private void onKeyTouchRelease(Button btn) {
+        KeyboardCtrl ctrl = mainGooey.getController(KeyboardCtrl.class);
+        btn.setOnTouchPressed(e -> {
+            onKeyReleased(ctrl.inferKeyCode(btn.getText()));
+        });
+    }
+    */
 }

@@ -13,7 +13,6 @@ public class Sound {
 
     public Sound(String soundDirPath) {
         this.soundDirPath = soundDirPath;
-
     }
 
     public void play() {
