@@ -10,6 +10,9 @@ public class Sound {
 
     private String soundDirPath;
     private AudioStream audioStream;
+    private boolean empty;
+    private boolean valid;
+
 
     public Sound(String soundDirPath) {
         this.soundDirPath = soundDirPath;
@@ -17,11 +20,13 @@ public class Sound {
 
     public void play() {
         InputStream inputStream = getClass().getResourceAsStream(this.soundDirPath);
-        try {
-            audioStream = new AudioStream(inputStream);
-        } catch (IOException e) {
-            e.printStackTrace();
+        if (!empty) {
+            try {
+                audioStream = new AudioStream(inputStream);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            AudioPlayer.player.start(audioStream);
         }
-        AudioPlayer.player.start(audioStream);
     }
 }

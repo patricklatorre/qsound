@@ -38,7 +38,9 @@ public class Keyboard extends GooeyJob {
 
     private void onKeyBtnClick(Button btn) {
         btn.setOnMouseClicked(e -> {
-            String soundPath = StringInput.display("File", "Sound file path:");
+            String soundPath = StringInput.display("File", "Workspace sound:");
+            // TODO: validate soundfile before loading in
+
             Sound sound = new Sound(soundPath);
             keyboardConfig.loadSoundToBtn(btn, sound);
         });
